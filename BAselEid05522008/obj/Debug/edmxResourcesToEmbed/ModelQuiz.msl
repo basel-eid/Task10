@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FaceBookModelStoreContainer" CdmEntityContainer="FaceBookEntities">
+    <EntitySetMapping Name="Userrs">
+      <EntityTypeMapping TypeName="FaceBookModel.Userr">
+        <MappingFragment StoreEntitySet="Userr">
+          <ScalarProperty Name="U_ID" ColumnName="U_ID" />
+          <ScalarProperty Name="U_Name" ColumnName="U_Name" />
+          <ScalarProperty Name="U_Password" ColumnName="U_Password" />
+          <ScalarProperty Name="U_Age" ColumnName="U_Age" />
+          <ScalarProperty Name="U_Gender" ColumnName="U_Gender" />
+          <ScalarProperty Name="U_Ph" ColumnName="U_Ph" />
+          <ScalarProperty Name="U_City" ColumnName="U_City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

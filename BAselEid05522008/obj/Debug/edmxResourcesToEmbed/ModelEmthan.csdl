@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FaceBookModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="A_ID" />
+    </Key>
+    <Property Name="A_ID" Type="Int32" Nullable="false" />
+    <Property Name="A_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="A_Pass" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Userr">
+    <Key>
+      <PropertyRef Name="U_ID" />
+    </Key>
+    <Property Name="U_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="U_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="U_Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="U_Age" Type="Int32" />
+    <Property Name="U_Gender" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="U_Ph" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="U_City" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="FaceBookEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Userrs" EntityType="Self.Userr" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,38 @@
+﻿<Page x:Class="BAselEid05522008.Choose"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BAselEid05522008"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Choose">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="489*"/>
+            <ColumnDefinition Width="311*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="164*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Choose" Style="{StaticResource label1}" Height="NaN" Margin="352,10,41,88" Width="NaN" Grid.RowSpan="2"></Label>
+        <Label Content="Phone" Style="{StaticResource label1}" Height="NaN" Margin="45,35,348,20" Width="NaN" Grid.Row="1"></Label>
+        <Label Content="Password" Style="{StaticResource label1}" Height="NaN" Margin="45,37,348,61" Width="NaN" Grid.Row="2"></Label>
+        <Button x:Name="Signin_butt" Content="Sign in" Style="{StaticResource button1}" Height="NaN" Margin="45,45,292,54" Width="NaN" Grid.Row="3" Click="Signin_butt_Click"></Button>
+        <TextBlock FontSize="25" Height="NaN" Margin="270,63,8,54" Width="NaN" Grid.Row="3">
+            <Hyperlink NavigateUri="SignUp.xaml" RequestNavigate="Hyperlink_RequestNavigate_1">Create an account</Hyperlink>
+        </TextBlock>
+        <TextBlock FontSize="25" Height="NaN" Margin="25,63,74,54" Width="NaN" Grid.Row="3" Grid.Column="1">
+            <Hyperlink NavigateUri="Forget.xaml" RequestNavigate="Hyperlink_RequestNavigate">Forget password</Hyperlink>
+        </TextBlock>
+        <TextBox x:Name="Name_Txt" HorizontalAlignment="Left" Margin="199,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="142" Height="40" Grid.Row="1" TextChanged="Name_Txt_TextChanged"/>
+        <TextBox x:Name="N_Txt" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="142" Height="40" Grid.Row="1" TextChanged="Name_Txt_TextChanged" Grid.Column="1"/>
+        <PasswordBox x:Name="Pass_Txt" HorizontalAlignment="Left" Margin="199,37,0,0"  VerticalAlignment="Top" Width="142" Height="40" Grid.Row="2"/>
+        <Label Content="Name" Style="{StaticResource label1}" Height="NaN" Margin="432,35,272,20" Width="NaN" Grid.Row="1" Grid.ColumnSpan="2"></Label>
+        <Button x:Name="SigninA_butt" Content="Signin A" Style="{StaticResource button1}" Height="NaN" Margin="270,105,67,136" Width="NaN" Grid.Row="2" Click="SigninA_butt_Click" Grid.RowSpan="2"/>
+    </Grid>
+</Page>

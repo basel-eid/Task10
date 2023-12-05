@@ -1,0 +1,53 @@
+﻿<Page x:Class="BAselEid05522008.Signup"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BAselEid05522008"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Signup">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="179*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Name" Style="{StaticResource label1}" Height="NaN" Margin="54,78,200,11" Width="NaN"></Label>
+        <Label Content="Password" Style="{StaticResource label1}" Height="NaN" Margin="45,5,209,3" Width="NaN" Grid.Row="1"></Label>
+        <Label Content="Age" Style="{StaticResource label1}" Height="NaN" Margin="45,2,218,13" Width="NaN" Grid.Row="2"></Label>
+        <Label Content="Phone num" Style="{StaticResource label1}" Height="NaN" Margin="45,47,190,12" Width="NaN" Grid.Row="2" Grid.RowSpan="2"></Label>
+        <Label Content="Gender" Style="{StaticResource label1}" Height="NaN" Margin="45,43,190,135" Width="NaN" Grid.Row="3" Grid.RowSpan="2"></Label>
+        <RadioButton x:Name="Male" Margin="239,11,92,146" Height="NaN" Width="NaN" Grid.Row="4"></RadioButton>
+        <RadioButton x:Name="Female" Margin="67,9,364,148" Height="NaN" Width="NaN" RenderTransformOrigin="8.097,0.366" Grid.Row="4" Grid.Column="1" Click="Female_Click"></RadioButton>
+        <ComboBox x:Name="combo" FontSize="15" Height="NaN" Margin="45,58,130,85" Width="NaN" Grid.Row="4">
+            <ComboBoxItem>Mansoura</ComboBoxItem>
+            <ComboBoxItem>Nasr city</ComboBoxItem>
+            <ComboBoxItem>Maadi</ComboBoxItem>
+            <ComboBoxItem>Mahala</ComboBoxItem>
+            <ComboBoxItem>Cairo</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Male" FontSize="15" HorizontalAlignment="Left" Margin="283,1,0,0" VerticalAlignment="Top" Grid.Row="4"/>
+        <Label Content="Female" FontSize="15" HorizontalAlignment="Left" Margin="106,1,0,0" VerticalAlignment="Top" Grid.Row="4" Grid.Column="1"/>
+        
+        <Button x:Name="SignUp_butt" Content="Sign up" Style="{StaticResource button1}" Height="NaN" Margin="12,98,315,26" Width="NaN" Grid.Row="4" Grid.Column="1" Click="SignUp_butt_Click"></Button>
+        <TextBlock FontSize="20" Height="NaN" Margin="194,98,30,27" Width="NaN" Grid.Row="4" Grid.Column="1">
+            <Hyperlink NavigateUri="Choose.xaml" RequestNavigate="Hyperlink_RequestNavigate">Already have an account</Hyperlink>
+        </TextBlock>
+        <TextBox x:Name="Name_Txt" HorizontalAlignment="Left" Margin="197,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="22"/>
+        <TextBox x:Name="Age_Txt" HorizontalAlignment="Left" Margin="197,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Center" Width="129" Height="23" Grid.Row="2"/>
+        <TextBox x:Name="Phone_Txt" HorizontalAlignment="Left" Margin="197,9,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="129" Height="23" Grid.Row="3"/>
+        <PasswordBox x:Name="PAss_Txt" HorizontalAlignment="Left" Margin="197,5,0,0"   VerticalAlignment="Top" Width="129" Height="23" Grid.Row="1"/>
+        <ComboBox x:Name="ComboG" Grid.Column="1" HorizontalAlignment="Left" Margin="194,62,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>Male</ComboBoxItem>
+            <ComboBoxItem>female</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Page>

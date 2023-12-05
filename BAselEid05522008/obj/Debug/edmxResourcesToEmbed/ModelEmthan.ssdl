@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FaceBookModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="A_ID" />
+    </Key>
+    <Property Name="A_ID" Type="int" Nullable="false" />
+    <Property Name="A_Name" Type="varchar" MaxLength="50" />
+    <Property Name="A_Pass" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Userr">
+    <Key>
+      <PropertyRef Name="U_ID" />
+    </Key>
+    <Property Name="U_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="U_Name" Type="varchar" MaxLength="50" />
+    <Property Name="U_Password" Type="nvarchar" MaxLength="20" />
+    <Property Name="U_Age" Type="int" />
+    <Property Name="U_Gender" Type="varchar" MaxLength="7" />
+    <Property Name="U_Ph" Type="nvarchar" MaxLength="11" />
+    <Property Name="U_City" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityContainer Name="FaceBookModelStoreContainer">
+    <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Userr" EntityType="Self.Userr" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
